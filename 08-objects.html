@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <title>Objects in JavaScript</title>
+    <body>
+        <p>I will finish objects in javascript now </p>
+    </body>
+    <script>
+        const product={
+            name: 'iPhone',
+            'delivery time': '1 day',
+            rating:{
+                stars: 5,
+                reviews: 1000
+            },
+            fun: function function1(){
+                console.log('This is a function inside an object');
+            }
+        };
+
+        console.log(product);
+        console.log(product.name);
+        console.log(product['name']);
+        console.log(product['delivery time']);
+        product.fun();
+        console.log(typeof console.log);
+        console.log(JSON.stringify(product));
+        const jsonString=JSON.stringify(product);
+        console.log(JSON.parse(jsonString));
+
+    </script>
+</html>
