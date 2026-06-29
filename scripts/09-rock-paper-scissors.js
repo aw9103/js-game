@@ -7,6 +7,22 @@
                 };
             }
         updateScoreElement();
+        let isAutoPlaying=false;
+        let intervalID;
+        function autoPlay(){
+
+            if(!isAutoPlaying){
+            intervalID=setInterval(function(){
+            const playerMove=pickComputerChoice();
+            playGame(playerMove);
+            },1000 );
+            isAutoPlaying=true;
+            }
+            else{
+                clearInterval(intervalID);
+                isAutoPlaying=false;
+            }
+        }
             function playGame(playerMove){
                 const computerMove = pickComputerChoice();
                 let result = '';
@@ -81,4 +97,5 @@
                     return 'scissors';
                 }
             }
+
           
